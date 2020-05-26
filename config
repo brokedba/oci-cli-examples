@@ -1,6 +1,6 @@
 [DEFAULT]
-user=ocid1.user.oc1..aaaaaaaayd2yf6ru5qhz3ec5mrg2fzyhhq34d42vyemqranmx55a6kh4yz4a
-fingerprint=bf:3b:2e:48:a2:98:10:40:8b:5d:95:a2:9e:fc:8d:01
+user=ocid1.user.oc1..  # change me !
+fingerprint=bf:3b:2e:48:a2:98:10:40:8b:5d:95:a2:9e:fc:8d:01 #change me !
 key_file=C:\oracle\oci\.oci\oci_api_key.pem
-tenancy=ocid1.tenancy.oc1..aaaaaaaafud7yerulg2jfk6boz3pdppzpdnznn4tesdmm3rk6skq2ul25g4a
-region=ca-toronto-1
+tenancy=ocid1.tenancy.oc1.. # change me
+region=ca-toronto-1  #change me !
