@@ -1,6 +1,6 @@
 [DEFAULT]
 user=ocid1.user.oc1..  # change me !
 fingerprint=bf:3b:2e:48:a2:98:10:40:8b:5d:95:a2:9e:fc:8d:01 #change me !
-key_file=C:\oracle\oci\.oci\oci_api_key.pem
+key_file=C:\oracle\oci\.oci\oci_api_key.pem # change me !
 tenancy=ocid1.tenancy.oc1.. # change me
 region=ca-toronto-1  #change me !
