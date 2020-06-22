@@ -57,7 +57,7 @@ do
         *) echo "invalid option";;
   esac
 done
-echo "*********************"
+echo "********** Network ***********"
 # ocid_img=$(oci compute image list -c $C --operating-system "Oracle Linux" --operating-system-version "7.8" --shape $shape --query 'data[0].id' --raw-output) 
 while true; do
  oci network vcn list -c $C --output table --query "data[*].{CIDR:\"cidr-block\", VCN_NAME:\"display-name\", DOMAIN_NAME:\"vcn-domain-name\", DNS:\"dns-label\"}"
@@ -101,9 +101,9 @@ echo
 echo ====================================
 echo Check the status of the new Instance
 echo ====================================
-oci compute instance list -c $C --display-name ${instance_name} --query "data[*].{name:\"display-name\",state:\"lifecycle-state\",id:id}" --output table
+#oci compute instance list -c $C --display-name ${instance_name} --query "data[*].{name:\"display-name\",state:\"lifecycle-state\",id:id}" --output table
 oci compute instance list -c $C --display-name ${instance_name} \
---query "data[*].{name:\"display-name\",state:\"lifecycle-state\",id:id,FD:\"fault-domain\",ocpu:\"shape-config\"[0].ocpus, RAM:\"shape-config\"[0].\"memory-in-gbs\",shape:shape,region:region}" --output table 
+--query "data[*].{name:\"display-name\",state:\"lifecycle-state\",id:id,FD:\"fault-domain\",shape:shape,region:region,ocpus:\"shape-config\".ocpus,RAM:\"shape-config\".\"memory-in-gbs\"}" --output table 
 oci compute instance list-vnics --instance-id "${ocid_instance}" --query "data[0].{private:\"private-ip\",public:\"public-ip\",Instance:\"display-name\"}" --output table
 echo
 echo "termination command ==> oci compute instance terminate --instance-id $ocid_instance" --force
