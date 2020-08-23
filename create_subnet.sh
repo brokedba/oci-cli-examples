@@ -21,10 +21,10 @@ while true; do
             if [ "$sub_cidr" = "" ] 
                 then echo "Entered CIDR is not valid. Please retry"
                 else
-                REGEX='(((25[0-5]|2[0-4][0-9]|1?[0-9][0-9]?)\.){3}(25[0-5]|2[0-4][0-9]|1?[0-9][0-9]?))(\/([1][6-9]|[2][0-9]|3[0]))([^0-9.]|$)'
+                REGEX='^(((25[0-5]|2[0-4][0-9]|1?[0-9][0-9]?)\.){3}(25[0-5]|2[0-4][0-9]|1?[0-9][0-9]?))(\/([1][6-9]|[2][0-9]|3[0]))([^0-9.]|$)'
                 vcn_pref=$(oci network vcn list -c $C --query "data [?\"display-name\"==\`$vcn_name\`] | [0].\"cidr-block\"" --raw-output| awk -F/ '{print $2}')
                 sub_pref=`echo $sub_cidr | awk -F/ '{print $2}'`
-                if [[ $sub_cidr =~ $REGEX ]]  && (( $sub_pref >= $vcn_pref && $sub_pref <= 30 ))
+                if [[ $sub_cidr =~ $REGEX ]]  && (( $sub_pref >= $vcn_pref && $sub_pref <= 28 ))
                 then
                 echo == Subnet information === 
                 echo VCN name = $vcn_name 
