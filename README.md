@@ -4,6 +4,6 @@ The tutorial will walk you through the required steps to have an instance spun i
 see my blog post for more detail: https://brokedba.blogspot.com/2020/06/launch-oci-instance-with-oci-cli-in-10.html
 ![Topology](https://brokedba.files.wordpress.com/2020/05/oci-cli-1.png?w=853)
 
-# cloud CLI for other platforms
+# cli examples for Other platforms
 - AWS-CLI https://github.com/brokedba/aws-cli-examples
 - AZURE-CLI https://github.com/brokedba/az-cli-examples 
