@@ -1,4 +1,4 @@
-## Installation for Windows 10 64bit to avoid Python deprecation warning 
+## Installation fix on  Windows to avoid Python deprecation warning 
 - learn more on my  blog http://www.brokedba.com/2023/04/oci-cli-python-warning-on-windows-10-my.html
 
 ## Install command as admin
