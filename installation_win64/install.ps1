@@ -198,7 +198,7 @@ function DownloadAndRunPythonExeInstaller($PythonInstallLocation, $Version) {
 
     # IntPtrSize == 8 on 64 bit machines
     $IntPtrSize = Invoke-Expression [IntPtr]::Size
-    if ($IntPtrSize -eq 4) {
+    if ($IntPtrSize -eq 8) {
         $PythonInstallerUrl = "https://www.python.org/ftp/python/$Version/python-$Version-amd64.exe"
     }
 
