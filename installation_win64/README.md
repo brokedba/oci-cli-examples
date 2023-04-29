@@ -2,7 +2,7 @@
 - learn more on my  blog http://www.brokedba.com/2023/04/oci-cli-python-warning-on-windows-10-my.html
 
 ## Install command as admin
-- From a command terminal 
+- From a command terminal after downloading my file
 ```
 powershell -NoProfile -ExecutionPolicy Bypass -Command "~\install.ps1"
 ```
